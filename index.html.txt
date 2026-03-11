@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Ad Grid</title>
+    <style>
+        body { background-color: #a7f3d0; margin: 20px; font-family: sans-serif; }
+        
+        /* This creates the 12-column grid layout */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 100px; /* Each 'square' is 100px tall */
+            gap: 10px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Styling for the ad boxes */
+        .ad-box { 
+            background: white; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            display: block; 
+            transition: 0.2s;
+        }
+        .ad-box:hover { transform: scale(1.02); }
+        .ad-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* SIZES */
+        .x1 { grid-column: span 1; grid-row: span 1; }
+        .x2 { grid-column: span 2; grid-row: span 2; }
+        .x3 { grid-column: span 3; grid-row: span 3; }
+        .wide { grid-column: span 2; grid-row: span 1; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="https://SHOE-WEBSITE-LINK.com" class="ad-box x2">
+        <img src="shoe-image.jpg">
+    </a>
+
+    <a href="https://ANOTHER-LINK.com" class="ad-box x3">
+        <img src="big-ad.jpg">
+    </a>
+
+    <a href="https://LINK.com" class="ad-box x1">
+        <img src="small-ad.jpg">
+    </a>
+    
+    </div>
+
+</body>
+</html>
